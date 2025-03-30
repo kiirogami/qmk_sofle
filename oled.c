@@ -1,28 +1,29 @@
 #include "luna.c"
 
 static void print_status_narrow(void) {
-    oled_write_P(PSTR("\n\n"), false);
-    oled_write_ln_P(PSTR("Kiiro\n"), false);
+    bool invert = false;
+    oled_write_P(PSTR("\n\n"), invert);
+    oled_write_ln_P(PSTR("Kiiro\n"), invert);
 
     switch (get_highest_layer(layer_state)) {
         case _QWERTY:
-            oled_write_ln_P(PSTR("Default"), false);
+            oled_write_ln_P(PSTR("Base"), invert);
             break;
         case _CHARS:
-            oled_write_ln_P(PSTR("chars"), false);
+            oled_write_ln_P(PSTR("Chars"), invert);
             break;
-        case _VIM:
-            oled_write_ln_P(PSTR("nvim"), false);
+        case _EDIT:
+            oled_write_ln_P(PSTR("Edit"), invert);
             break;
-        case _NUMPAD:
-            oled_write_ln_P(PSTR("num"), false);
+        case _TETRIS:
+            oled_write_ln_P(PSTR("Tetr"), invert);
             break;
         default:
-            oled_write_ln_P(PSTR("Undef"), false);
+            oled_write_ln_P(PSTR("?????"), invert);
     }
 
     oled_set_cursor(0, 5);
-    oled_write("cpslk", led_usb_state.caps_lock);
+    oled_write_P(led_usb_state.caps_lock ? PSTR("CpsLk") : PSTR(""), invert);
 
     render_luna(0, 13);
 }

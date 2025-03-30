@@ -20,14 +20,12 @@
 #include QMK_KEYBOARD_H
 #include "keymap_czech.h"
 
-#define INDICATOR_BRIGHTNESS 30
 
 enum sofle_layers {
     _QWERTY   = 0,
     _CHARS,
     _EDIT,
     _TETRIS,
-    _NUMPAD,
 };
 
 
@@ -104,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, XXXXXXX, KC_DEL , KC_END , KC_PGDN, XXXXXXX,                         XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, XXXXXXX, XXXXXXX,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,       XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, _______,
                           _______, _______, _______, _______, _______,       _______, _______, _______, _______, _______
-      ) 
+    ),
     
     /* _TETRIS
      * ,-----------------------------------------.                    ,-----------------------------------------.
@@ -126,7 +124,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, XXXXXXX, XXXXXXX, KC_S,    XXXXXXX, XXXXXXX,                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         _______, XXXXXXX, KC_Z,    KC_X,    KC_C,    XXXXXXX, _______,       _______, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, _______,
                           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,       _______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT
-      ) 
+    ) 
+    
+    // /* _EMPTY
+    //  * ,-----------------------------------------.                    ,-----------------------------------------.
+    //  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
+    //  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
+    //  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
+    //  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
+    //  * |      |      |      |      |      |      |-------.    ,-------|      |      |      |      |      |      |
+    //  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
+    //  * |      |      |      |      |      |      |-------|    |-------|      |      |      |      |      |      |
+    //  * `-----------------------------------------/       /     \      \-----------------------------------------'
+    //  *            |      |      |      |      | /       /       \      \  |      |      |      |      |
+    //  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
+    //  *            `----------------------------------'           '------''---------------------------'
+    //  */
+    // [_EMPTY] = LAYOUT(
+    //     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    //     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    //     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    //     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    //                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    //   ) 
     };
 
 #ifdef OLED_ENABLE
