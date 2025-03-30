@@ -22,8 +22,7 @@ static void print_status_narrow(void) {
             oled_write_ln_P(PSTR("?????"), invert);
     }
 
-    oled_set_cursor(0, 5);
-    oled_write_P(led_usb_state.caps_lock ? PSTR("CpsLk") : PSTR(""), invert);
+    oled_write_ln_P(led_usb_state.caps_lock ? PSTR("CpsLk") : PSTR(""), invert);
 
     render_luna(0, 13);
 }
