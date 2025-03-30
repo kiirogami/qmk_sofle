@@ -108,22 +108,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,-----------------------------------------.                    ,-----------------------------------------.
      * | ESC  |  F1  |  F2  |  F3  |  F4  |  F5  |                    |  F6  |  F7  |  F8  |  F9  | F10  | F11  |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-     * |      |      |      |      |      |      |                    |      |      |      |      |      | Bspc |
+     * |      |      |      |      |      |   Y  |                    |      |      |      |      |      | Bspc |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
      * | Tab  |      |      |   S  |      |      |-------.    ,-------|      |      |      |      |      |      |
      * |------+------+------+------+------+------|  MUTE |    | _TETR |------+------+------+------+------+------|
      * |LShift|      |   Z  |   X  |   C  |      |-------|    |-------|      |      |  Up  |      |      |RShift|
      * `-----------------------------------------/       /     \      \-----------------------------------------'
-     *            |      |      |      |      | / Space /       \Enter \  |      | Left | Down | Right|
+     *            |      |      | LCTR |      | / Space /       \Enter \  |      | Left | Down | Right|
      *            |      |      |      |      |/       /         \      \ |      |      |      |      |
      *            `----------------------------------'           '------''---------------------------'
      */
     [_TETRIS] = LAYOUT(
-        _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                           KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+        _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                           KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_Y,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
         _______, XXXXXXX, XXXXXXX, KC_S,    XXXXXXX, XXXXXXX,                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         _______, XXXXXXX, KC_Z,    KC_X,    KC_C,    XXXXXXX, _______,       _______, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, _______,
-                          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,       _______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT
+                          XXXXXXX, _______, XXXXXXX, XXXXXXX, _______,       _______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT
     ) 
     
     // /* _EMPTY
