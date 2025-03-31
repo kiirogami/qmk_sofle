@@ -15,6 +15,10 @@ static void print_status_narrow(void) {
         case _EDIT:
             oled_write_ln_P(PSTR("Edit"), invert);
             break;
+        case _NUMS:
+            oled_write_ln_P(PSTR("NumP"), invert);
+            oled_write_ln_P(led_usb_state.caps_lock ? PSTR("NumLk") : PSTR(""), invert);
+            break;
         case _TETRIS:
             oled_write_ln_P(PSTR("Tetr"), invert);
             break;
@@ -22,7 +26,7 @@ static void print_status_narrow(void) {
             oled_write_ln_P(PSTR("?????"), invert);
     }
 
-    oled_write_ln_P(led_usb_state.caps_lock ? PSTR("CpsLk") : PSTR(""), invert);
+    oled_write_ln_P(led_usb_state.num_lock ? PSTR("CpsLk") : PSTR(""), invert);
 
     render_luna(0, 13);
 }
