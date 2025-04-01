@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |------+------+------+------+------+------|  MUTE |    | _TETR |------+------+------+------+------+------|
      * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |RShift|
      * `-----------------------------------------/       /     \      \-----------------------------------------'
-     *            | LGUI | LAlt | LCTR |_EDIT | /Space  /       \Enter \  |_CHARS| RCTR | RAlt | RGUI |
+     *            | LGUI | LAlt | LCTR |Space | /_EDIT  /       \_CHAR \  |Enter | RCTR | RAlt | RGUI |
      *            |      |      |      |      |/       /         \      \ |      |      |      |      |
      *            `----------------------------------'           '------''---------------------------'
      */
@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
      * | Shift|  =   |  -   |  +   |   {  |   }  |-------|    |-------|   [  |   ]  |   ;  |   :  |   \  | Shift|
      * `-----------------------------------------/       /     \      \-----------------------------------------'
-     *            | LGUI | LAlt | LCTR |_EDIT | /Space  /       \Enter \  |_CHARS| RCTR | RAlt | RGUI |
+     *            | LGUI | LAlt | LCTR |Space | /_EDIT  /       \_CHAR \  |Enter | RCTR | RAlt | RGUI |
      *            |      |      |      |      |/       /         \      \ |      |      |      |      |
      *            `----------------------------------'           '------''---------------------------'
      */
@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                            KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_F12,
       _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                         KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_PIPE,
       _______, KC_EQL,  KC_MINS, KC_PLUS, KC_LCBR, KC_RCBR, _______,       XXXXXXX, KC_LBRC, KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS, _______,
-                        _______, _______, _______, _______, _______,       _______, MO(3),   _______, _______, _______
+                        _______, _______, _______, _______, _______,       _______, _______,   _______, _______, _______
     ),
     
     /* _EDIT
@@ -94,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
      * |LShift|      |      |     |       |      |-------|    |-------|      | Left | Down | Right|      |RShift|
      * `-----------------------------------------/       /     \      \-----------------------------------------'
-     *            | LGUI | LAlt | LCTR |_EDIT | /Space  /       \Enter \  |_CHARS| RCTR | RAlt | RGUI |
+     *            | LGUI | LAlt | LCTR |Space | /_EDIT  /       \_CHAR \  |Enter | RCTR | RAlt | RGUI |
      *            |      |      |      |      |/       /         \      \ |      |      |      |      |
      *            `----------------------------------'           '------''---------------------------'
      */
@@ -116,7 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
      * |LShift|      |      |      |      |      |-------|    |-------|      |  1   |  2   |  3   |      |RShift|
      * `-----------------------------------------/       /     \      \-----------------------------------------'
-     *            | LGUI | LAlt | LCTR |_EDIT | /Space  /       \Enter \  |   0  |  0   |  .   |      |
+     *            | LGUI | LAlt | LCTR |Space | /_EDIT  /       \_CHAR \  |Enter |  0   |  .   |      |
      *            |      |      |      |      |/       /         \      \ |      |      |      |      |
      *            `----------------------------------'           '------''---------------------------'
      */
@@ -125,7 +125,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         XXXXXXX,   KC_P7,   KC_P8,   KC_P9, KC_PPLS, _______,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         XXXXXXX,   KC_P4,   KC_P5,   KC_P6, XXXXXXX, XXXXXXX,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,       XXXXXXX, XXXXXXX,   KC_P1,   KC_P2,   KC_P3, XXXXXXX, _______,
-                          _______, _______, _______, _______, _______,       _______, XXXXXXX,   KC_P0,   KC_P0, KC_PDOT
+                          _______, _______, _______, _______, _______,       _______, _______,   KC_P0  KC_PDOT, XXXXXXX
       ), 
     
     /* _TETRIS
@@ -138,7 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |------+------+------+------+------+------|  MUTE |    | _TETR |------+------+------+------+------+------|
      * |LShift|      |   Z  |   X  |   C  |      |-------|    |-------|      |      |  Up  |      |      |RShift|
      * `-----------------------------------------/       /     \      \-----------------------------------------'
-     *            |      |      | LCTR |      | / Space /       \Enter \  |      | Left | Down | Right|
+     *            |      |      | LCTR |Space | /       /       \      \  |Enter | Left | Down | Right|
      *            |      |      |      |      |/       /         \      \ |      |      |      |      |
      *            `----------------------------------'           '------''---------------------------'
      */
@@ -147,7 +147,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_Y,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
         _______, XXXXXXX, XXXXXXX, KC_S,    XXXXXXX, XXXXXXX,                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         _______, XXXXXXX, KC_Z,    KC_X,    KC_C,    XXXXXXX, _______,       _______, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, _______,
-                          XXXXXXX, _______, XXXXXXX, XXXXXXX, _______,       _______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT
+                          XXXXXXX, XXXXXXX, _______, _______, XXXXXXX,       XXXXXXX, _______, KC_LEFT, KC_DOWN, KC_RGHT
     )
     
     // /* _EMPTY
