@@ -101,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_EDIT] = LAYOUT(
         _______, KC_CAPS, KC_PSCR, KC_SCRL, KC_PAUS, XXXXXXX,                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, KC_INS , KC_HOME, KC_PGUP, XXXXXXX,                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-        _______, XXXXXXX, KC_DEL , KC_END , KC_PGDN, XXXXXXX,                         XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, XXXXXXX, XXXXXXX,
+        _______, XXXXXXX, KC_DEL , KC_END , KC_PGDN, XXXXXXX,                         XXXXXXX, XXXXXXX,   KC_UP, XXXXXXX, XXXXXXX, XXXXXXX,
         _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,       XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, _______,
                           _______, _______, _______, _______, _______,       _______, _______, _______, _______, _______
     ),
@@ -134,20 +134,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
      * |      |      |      |      |      |   Y  |                    |      |      |      |      |      | Bspc |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-     * | Tab  |      |      |   S  |      |      |-------.    ,-------|      |      |      |      |      |      |
+     * | Tab  |      |      |   S  |      |      |-------.    ,-------|      |      |  Up  |      |      |      |
      * |------+------+------+------+------+------|  MUTE |    | _TETR |------+------+------+------+------+------|
-     * |LShift|      |   Z  |   X  |   C  |      |-------|    |-------|      |      |  Up  |      |      |RShift|
+     * |LShift|      |   Z  |   X  |   C  |      |-------|    |-------|      |Left  | Down |Right |      |RShift|
      * `-----------------------------------------/       /     \      \-----------------------------------------'
-     *            |      |      | LCTR |Space | /       /       \      \  |Enter | Left | Down | Right|
+     *            |      |      | LCTR |Space | /       /       \      \  |Enter | RCTR | RAlt | RGUI |
      *            |      |      |      |      |/       /         \      \ |      |      |      |      |
      *            `----------------------------------'           '------''---------------------------'
      */
     [_TETRIS] = LAYOUT(
-        _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                           KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
+        _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                           KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_Y,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-        _______, XXXXXXX, XXXXXXX, KC_S,    XXXXXXX, XXXXXXX,                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        _______, XXXXXXX, KC_Z,    KC_X,    KC_C,    XXXXXXX, _______,       _______, XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, _______,
-                          XXXXXXX, XXXXXXX, _______, _______, XXXXXXX,       XXXXXXX, _______, KC_LEFT, KC_DOWN, KC_RGHT
+        _______, XXXXXXX, XXXXXXX, KC_S,    XXXXXXX, XXXXXXX,                         XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, XXXXXXX,
+        _______, XXXXXXX, KC_Z,    KC_X,    KC_C,    XXXXXXX, _______,       _______, XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, _______,
+                          XXXXXXX, XXXXXXX, _______, _______, XXXXXXX,       XXXXXXX, _______, _______, _______, _______
     )
     
     // /* _EMPTY
